@@ -1,0 +1,1 @@
+"""Data package: parametric dataset generation and PyTorch data pipeline."""

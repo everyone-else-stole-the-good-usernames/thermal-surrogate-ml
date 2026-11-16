@@ -1,0 +1,1 @@
+"""Training and evaluation utilities for the FNO-2D thermal surrogate."""

@@ -1,0 +1,40 @@
+[project]
+name = "thermal-surrogate-ml"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Yannis", email = "ys5123@ic.ac.uk" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.3",
+    "pytest>=9.1.1",
+    "ruff>=0.16.6",
+    "scipy>=1.18.1",
+    "torch",
+    "torchaudio",
+    "torchvision"
+]
+
+[project.scripts]
+thermal-surrogate-ml = "thermal_surrogate_ml:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu126" }
+torchvision = { index = "pytorch-cu126" }
+torchaudio = { index = "pytorch-cu126" }

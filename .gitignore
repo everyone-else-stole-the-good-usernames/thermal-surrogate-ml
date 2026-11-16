@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Test and lint caches
+.pytest_cache/
+.ruff_cache/
+
+# Model checkpoints (large binaries)
+checkpoints/
+
+# Generated datasets (root-level only; src/.../data/ is source code)
+/data/
+
+# Legacy reference code (read-only, not tracked)
+reference/
+
+# OS metadata
+.DS_Store
